@@ -29,10 +29,9 @@ a {
 	text-decoration: none;
 }
 
-// NAV
+// // NAV
 .navbar {
 	position: fixed;
-	top: 0;
 	width: 100%;
 	background-color: $second-color;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -52,25 +51,38 @@ a {
 			transition: color 0.3s;
 			z-index: 1000000000;
 		}
-	}
 
-	.bar {
-		display: block;
-		width: 25px;
-		height: 3px;
-		margin: 5px auto;
-		transition: 0.3s ease-in-out;
-		background-color: $fourth-color;
+		.hamburger{
+			display: block;
+
+			.bar {
+				display: block;
+				width: 25px;
+				height: 3px;
+				margin: 5px auto;
+				transition: 0.3s ease-in-out;
+				background-color: $fourth-color;
+			}
+		}
 	}
 
 	.nav-menu {
 		display: flex;
+		position: fixed;
+		flex-direction: column;
+		top: -300px;
+		left: 0;
+		width: 100%;
 		justify-content: space-between;
 		align-items: center;
 		z-index: 1;
+		border-radius: 10px;
+		text-align: center;
+		transition: 0.3s;
+		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 
 		&-item {
-			margin-left: 5rem;
+			margin: 2.5rem;
 
 			&-link {
 				font-size: 1.6rem;
@@ -80,14 +92,15 @@ a {
 				transition: color 0.3s;
 
 				&:hover {
-					color: $main-color;
+					color: $third-color;
 				}
 			}
 		}
 	}
 
-	.hamburger {
-		display: none;
+	.nav-menu.active {
+		background-color: $main-color;
+		top: 6rem;
 	}
 }
 
@@ -156,7 +169,6 @@ header {
 // products
 
 .products {
-
 	&__box {
 		display: flex;
 		flex-direction: column;
@@ -165,7 +177,7 @@ header {
 		color: $third-color;
 	}
 
-	&__content{
+	&__content {
 		margin: 1.6em;
 	}
 
@@ -174,7 +186,7 @@ header {
 		text-align: center;
 		font-size: 3rem;
 		margin: 1em;
-		color: $fourth-color;
+		color: $third-color;
 	}
 
 	&__img {
@@ -225,7 +237,7 @@ header {
 
 	h2 {
 		text-align: center;
-		color: $second-color;
+		color: $fifth-color;
 		text-transform: uppercase;
 		font-size: 3rem;
 		padding-top: 1em;
@@ -271,7 +283,7 @@ header {
 		z-index: 0;
 	}
 
-	&-text{
+	&-text {
 		text-align: center;
 	}
 }
@@ -296,7 +308,7 @@ header {
 .contact {
 	h2 {
 		text-align: center;
-		color: $fourth-color;
+		color: $third-color;
 		text-transform: uppercase;
 		font-size: 3rem;
 		padding-top: 1em;
@@ -346,41 +358,6 @@ header {
 	}
 }
 
-// =====================
-// ===== MEDIA
-// =====================
-
-@media (max-width: 768px) {
-	.navbar {
-		&-content {
-			.hamburger {
-				display: block;
-			}
-		}
-	}
-
-	.nav-menu {
-		position: fixed;
-		top: -300px;
-		left: 0;
-		flex-direction: column;
-		width: 100%;
-		border-radius: 10px;
-		text-align: center;
-		transition: 0.3s;
-		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-
-		&-item {
-			margin: 2.5rem;
-		}
-	}
-
-	.nav-menu.active {
-		background-color: $main-color;
-		top: 6rem;
-	}
-}
-
 @media (min-width: 576px) {
 	.products {
 		&__box {
@@ -408,6 +385,58 @@ header {
 }
 
 @media (min-width: 768px) {
+	.navbar {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: $second-color;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+		z-index: 1000000000;
+
+		&-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 1.5rem;
+
+			&-logo {
+				font-size: 2.1rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: $fourth-color;
+				transition: color 0.3s;
+				z-index: 1000000000;
+			}
+		}
+
+		.nav-menu {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 1;
+
+			&-item {
+				margin-left: 5rem;
+
+				&-link {
+					font-size: 1.6rem;
+					font-weight: 400;
+					text-transform: uppercase;
+					color: $fourth-color;
+					transition: color 0.3s;
+
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
+		}
+
+		.hamburger {
+			display: none;
+		}
+	}
+
 	header {
 		.hero {
 			&-content {
@@ -423,8 +452,7 @@ header {
 	}
 
 	.products {
-
-		&__content{
+		&__content {
 			align-items: flex-start;
 		}
 		&-heading {
@@ -432,7 +460,6 @@ header {
 		}
 
 		&-h3 {
-			
 			font-size: 2rem;
 		}
 
@@ -446,8 +473,8 @@ header {
 			object-fit: cover;
 		}
 	}
-	.team{
-		h2{
+	.team {
+		h2 {
 			font-size: 3.5rem;
 		}
 	}
@@ -478,7 +505,7 @@ header {
 	}
 
 	.contact {
-		h2{
+		h2 {
 			font-size: 3.5rem;
 		}
 
