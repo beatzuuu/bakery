@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <script src="https://kit.fontawesome.com/c876edd7c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-content wrapper">
+            <a href="#" class="navbar-content-logo"><i class="fa-solid fa-bread-slice"></i> Bakery</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="#products" class="nav-menu-item-link">Produkty</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#team" class="nav-menu-item-link">Zespół</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#contact" class="nav-menu-item-link">Kontakt</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero">
+            <div class="hero-shadow"></div>
+            <div class="hero-content">
+                <h1>Bakery</h1>
+                <p>Twoje ulubione pieczywo z dostawą do domu!</p>
+                <button class="hero-content-btn btn-special-animation">Zamów!</button>
+            </div>
+        </div>
+
+        <main>
+            <section id="products">
+
+                <div class="products wrapper">
+                    <h2 class="products-heading">Nasze produkty</h2>
+                    <div class="products__box">
+                        <img class="products__img" src="./img/productsone.jpg" alt="">
+                        <div class="products__content">
+                            <h3 class="products-h3">Pieczywo</h3>
+                            <p class="products__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                                explicabo cupiditate beatae nemo minima aliquid pariatur ratione esse eveniet inventore,
+                                odit magnam obcaecati sunt ipsa laudantium.</p>
+                        </div>
+                    </div>
+                    <!-- second box -->
+                    <div class="products__box">
+                        <img class="products__img products__img--right" src="./img/productstwo.jpg" alt="">
+                        <div class="products__content">
+                            <h3 class="products-h3">ciasta</h3>
+                            <p class="products__text products__text--right">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Magni
+                                explicabo cupiditate beatae nemo minima aliquid pariatur ratione esse eveniet inventore,
+                                odit magnam obcaecati sunt ipsa laudantium.</p>
+                        </div>
+                    </div>
+                    <button class="products__btn btn-special-animation">Sklep Online</button>
+                </div>
+            </section>
+
+
+            <!-- TEAM -->
+            <section id="team" class="team">
+
+                <h2>Zespół</h2>
+
+                <div class="container">
+
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="./img/team/man-baker-kitchen-by-pastry-cart.jpg" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Piekarz Tomek</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+                                    quo nisi ullam amet, ipsum consequatur!</p>
+                            </div>
+                        </div>
+                        <!-- SECOND -->
+                        <div class="card">
+                            <img src="./img/team/portrait-bakery-seller-with-arms-crossed-standing-front-shelf-full-bred-bagels-pastry.png"
+                                alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Pani Kasia</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+                                    quo nisi ullam amet, ipsum consequatur!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="team-shadow"></div>
+            </section>
+
+
+            <section id="contact" class="contact">
+                <h2>kontakt</h2>
+
+                <div class="container">
+
+                    <div class="contact-us">
+
+                        <div class="contact-item">
+                            <h3>social media</h3>
+                            <div class="social-media">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <h3>piekarnia w opolu</h3>
+                            <p>Rynek 1a</p>
+                            <p>45-015 Opole</p>
+                            <p>77 123 45 67 </p>
+                            <p>bakery@mail.pl</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer-text"> &copy; <span class="footer__year"></span> Bakery</p>
+            </footer>
+        </main>
+
+
+
+        <script src="./js/main.js"></script>
+</body>
+
+</html>
