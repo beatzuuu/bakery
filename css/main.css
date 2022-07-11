@@ -135,6 +135,7 @@ header .hero-content {
   flex-direction: column;
   height: 100%;
   padding: 10px;
+  color: #d9d9d9;
   text-align: center;
   z-index: 5;
 }
@@ -152,7 +153,7 @@ header .hero-content-btn {
   background: #d98c5f;
   border: none;
   border-radius: 8px;
-  color: #8c4227;
+  color: #401d10;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -164,13 +165,17 @@ header .hero-content-btn::before {
 .products__box {
   display: flex;
   flex-direction: column;
-  margin: 1em;
+  margin: 1.6em;
   margin-bottom: 2em;
+  color: #401d10;
+}
+.products__content {
+  margin: 1.6em;
 }
 .products-heading {
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 3rem;
   margin: 1em;
   color: #8c4227;
 }
@@ -197,7 +202,7 @@ header .hero-content-btn::before {
   background: #d98c5f;
   border: none;
   border-radius: 8px;
-  color: #8c4227;
+  color: #401d10;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -218,7 +223,7 @@ header .hero-content-btn::before {
   text-align: center;
   color: #d98c5f;
   text-transform: uppercase;
-  font-size: 2.6rem;
+  font-size: 3rem;
   padding-top: 1em;
 }
 .team-shadow {
@@ -247,7 +252,8 @@ header .hero-content-btn::before {
   margin: 2em;
   padding: 1em;
   border-radius: 30px;
-  background-color: #d98c5f;
+  background-color: #d9d9d9;
+  color: #401d10;
   transition: transform 0.3s;
 }
 .card img {
@@ -259,6 +265,9 @@ header .hero-content-btn::before {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 0;
+}
+.card-text {
+  text-align: center;
 }
 
 .card:hover {
@@ -280,14 +289,14 @@ header .hero-content-btn::before {
   text-align: center;
   color: #8c4227;
   text-transform: uppercase;
-  font-size: 2.6rem;
+  font-size: 3rem;
   padding-top: 1em;
 }
 .contact-us {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #8c4227;
+  color: #401d10;
 }
 .contact-us .contact-item {
   margin: 15px 0;
@@ -303,7 +312,7 @@ header .hero-content-btn::before {
 }
 .contact-us .contact-item .social-media a {
   padding: 10px;
-  color: #8c4227;
+  color: #401d10;
 }
 .contact-us .contact-item .social-media a:hover {
   color: #f2ca99;
@@ -328,7 +337,6 @@ header .hero-content-btn::before {
     top: -300px;
     left: 0;
     flex-direction: column;
-    background-color: #d98c5f;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -339,6 +347,7 @@ header .hero-content-btn::before {
     margin: 2.5rem;
   }
   .nav-menu.active {
+    background-color: #f2ca99;
     top: 6rem;
   }
 }
@@ -370,8 +379,11 @@ header .hero-content-btn::before {
   header .hero-content p {
     font-size: 2.5rem;
   }
+  .products__content {
+    align-items: flex-start;
+  }
   .products-heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   .products-h3 {
     font-size: 2rem;
@@ -387,7 +399,7 @@ header .hero-content-btn::before {
        object-fit: cover;
   }
   .team h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   .team-hero-img {
     background-image: url("../img/heroteam-big.jpg");
@@ -410,7 +422,7 @@ header .hero-content-btn::before {
     font-size: 2rem;
   }
   .contact h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   .contact-us {
     flex-direction: row;
