@@ -411,7 +411,10 @@ header {
 
 		.nav-menu {
 			display: flex;
-			justify-content: space-between;
+			flex-direction: row;
+			top: 0;
+			right: 0;
+			justify-content: end;
 			align-items: center;
 			z-index: 1;
 
